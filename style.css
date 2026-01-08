@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Digital Numbers";
+    src: url(fonts/DigitalNumbers-Regular.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.howly {
+    position: absolute;
+    height: 75px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 95px;
+    margin-top: 127px;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: row; 
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.time-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-value {
+    font-family: 'Digital Numbers', sans-serif;
+    font-size: 80px;
+    color: #dedede;
+    border-radius: 10px;
+    min-width: 150px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.time-label {
+    font-family: "Digital Numbers";
+    font-size: 18px;
+    color: #dedede;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+/* Portrait */
+@media (max-width: 480px) {
+    .background {
+        object-fit: cover;
+        
+    }
+    
+    .content {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 280px;
+    }
+
+    .howly {
+        height: 35px;
+        margin-left: 45px;
+        margin-top: 59px;
+    }
+
+    .countdown {
+        gap: 10px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .time-value {
+        font-size: 40px;
+        min-width: 70px;
+    }
+
+    .time-label {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}   
