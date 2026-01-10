@@ -1,4 +1,4 @@
-const targetDate = new Date('2026-02-27T23:59:59').getTime();
+const targetDate = new Date('2026-02-18T23:59:59').getTime();
 // const finalDate = new Date(Date.now() + 56 * 24 * 60 * 60 * 1000).getTime();
 // yg diatas klo misalnya hitung tgl final jg cmn nda perlu sih
 

@@ -3,6 +3,13 @@
     src: url(fonts/DigitalNumbers-Regular.ttf) format("truetype");
 }
 
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +19,7 @@
 body {
     overflow: hidden;
     height: 100vh;
+    font-family: "Audiowide", sans-serif;
 }
 
 .background {
@@ -68,32 +76,96 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    background: rgba(80, 80, 80, 0.5);
+    padding: 10px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .time-value {
     font-family: 'Digital Numbers', sans-serif;
     font-size: 80px;
-    color: #dedede;
+    color: #ffc818;
     border-radius: 10px;
     min-width: 150px;
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(60, 62, 63);
 }
 
 .time-label {
     font-family: "Digital Numbers";
     font-size: 18px;
-    color: #dedede;
+    color: #ffc818;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
 
+.links {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.separator {
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom,
+        transparent,
+        #00d4ff 20%,
+        #00d4ff 80%,
+        transparent
+    );
+    box-shadow: rgba(0, 212, 255, 0.5) 0 0 10px;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #991b1e;
+    color: #dedede;
+}
+
+.btn-secondary {
+    background-color: #46A4C1;
+    color: #dedede;
+}
+
+.btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #dedede;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
 }
 
 /* Portrait */
-@media (max-width: 480px) {
+@media (min-width: 344px) and (max-width: 767px) {
     .background {
         object-fit: cover;
-        
     }
     
     .content {
@@ -115,15 +187,72 @@ body {
         margin-top: 20px;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 200%;
+    }
+
+    .time-segment {
+        padding: 15px 15px;
+        width: calc(50% - 5px);
+        flex: 0 0 calc(50% - 5px);
     }
 
     .time-value {
-        font-size: 40px;
-        min-width: 70px;
+        font-size: 32px;
+        min-width: 80px;
+        transition: all 0.3s ease;
     }
 
     .time-label {
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 1px;
     }
+
+    .links {
+        margin-top: 25px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .separator {
+        height: 40px;
+        order: 3;
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(to right,
+            transparent,
+            #00d4ff 20%,
+            #00d4ff 80%,
+            transparent
+        );
+    }
+
+    .lock-icon {
+        font-size: 20px;
+    }
+
+    .lock-text {
+        font-size: 12px;
+    }
 }   
+
+/* Portrait Tablet / iPad */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo {
+        max-width: 400px;
+    }
+
+    .howly {
+        height: 50px;
+        margin-left: 65px;
+        margin-top: 85px;
+    }
+
+    .time-value {
+        font-size: 60px;
+        min-width: 120px;
+    }
+
+    .time-label {
+        font-size: 16px;
+    }
+}
