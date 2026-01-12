@@ -3,22 +3,29 @@
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.8);
+    width: auto;
+    background: rgb(222, 222, 222, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .programming {
-    color: #991b1e;
+    color: #46A4C1;
     font-size: 36px;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+    background: rgba(70, 164, 193, 0.1);
+    border-radius: 10px 10px 0 0;
 }
 
 .logic {
-    color: #46A4C1;
+    color: #991b1e;
     font-size: 36px;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+    background: rgba(153, 27, 30, 0.1);
+    border-radius: 10px 10px 0 0;
 }
 
 .desc-text {
