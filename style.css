@@ -21,7 +21,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow:visible;
     height: 100vh;
     font-family: "Audiowide", sans-serif;
     background-image: url('/assets/nplc_desktop_background.png');
@@ -35,6 +35,7 @@ body {
     left: 0;
     z-index: -1;
     object-fit: cover;
+    object-position: center;
 }
 
 .bg {
@@ -186,7 +187,7 @@ body {
 /* Portrait */
 @media (min-width: 344px) and (max-width: 767px) {
     .background {
-        object-fit: cover;
+        object-position: center top;
     }
     
     .content {
@@ -229,14 +230,15 @@ body {
     }
 
     .links {
-        margin-top: 25px;
-        gap: 15px;
+        margin-top: 20px;
+        display: flex;
         flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
     }
 
     .separator {
-        height: 40px;
-        order: 3;
+        order: -1;
         width: 80%;
         height: 2px;
         background: linear-gradient(to right,
@@ -245,6 +247,12 @@ body {
             #00d4ff 80%,
             transparent
         );
+        box-shadow: rgba(0, 212, 255, 0.5) 0 0 10px;
+        margin: px 0;
+    }
+
+    .btn-wrapper, .btn {
+        order: 1;
     }
 
     .lock-icon {
@@ -258,16 +266,6 @@ body {
 
 /* Portrait Tablet / iPad */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .logo {
-        max-width: 400px;
-    }
-
-    .howly {
-        height: 50px;
-        margin-left: 65px;
-        margin-top: 85px;
-    }
-
     .time-value {
         font-size: 60px;
         min-width: 120px;
