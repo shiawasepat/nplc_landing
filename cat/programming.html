@@ -14,23 +14,27 @@
     </style>
 </head>
 <body>
-    <div class="background">
-        <img src="../assets/nplc_background.png" alt="NPLC Background" class="bg">
-    </div>
-
-    <a href="/index.html" class="back-btn">⬅️ Back to Home</a>
-
+    <picture>
+        <source 
+        media="(min-width: 768px)" 
+        srcset="/assets/nplc_desktop_background.png">
+        <source 
+        media="(max-width: 767px)" 
+        srcset="/assets/nplc_mobile_background.png">
+        <img src="/assets/nplc_desktop_background.png" alt="NPLC Background" class="background">
+    </picture>
     <div class="desc">
         <h2 class="programming">🖥️ Programming Category</h2>
         <div class="desc-content">
             <div class="desc-text">
-            <p>Kompetisi pemrograman yang menguji kemampuan peserta dalam menyelesaikan berbagai persoalan algoritma seperti array, struktur data, graph, pencarian, pengurutan, hibgga dynamic programming melalui coding
-        </p>
+                <p>Kompetisi pemrograman yang menguji kemampuan peserta dalam menyelesaikan berbagai persoalan algoritma seperti array, struktur data, graph, pencarian, pengurutan, hibgga dynamic programming melalui coding
+                </p>
+            </div>
+            <div class="desc-image">
+                <img src="/pics/MAS09636.JPG" alt="Programming Category Image">
+            </div>
         </div>
-        <div class="desc-image">
-            <img src="/pics/DSC00911.JPG" alt="Programming Category Image">
-        </div>
-        </div>
+        <a href="/" class="back-btn">⬅️ Back to Home</a>
     </div>
 </body>
 </html>

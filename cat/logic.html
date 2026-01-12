@@ -14,20 +14,27 @@
     </style>
 </head>
 <body>
-    <div class="background">
-        <img src="../assets/nplc_background.png" alt="NPLC Background" class="bg">
-    </div>
-    <a href="/index.html" class="back-btn">⬅️ Back to Home</a>
-    
-    <div class="dev-overlay">
-        <p>This page is still under development phase</p>
-        <p>We're sorry for the inconvenience</p>
-    </div>    
+    <picture>
+        <source 
+        media="(min-width: 768px)" 
+        srcset="/assets/nplc_desktop_background.png">
+        <source 
+        media="(max-width: 767px)" 
+        srcset="/assets/nplc_mobile_background.png">
+        <img src="/assets/nplc_desktop_background.png" alt="NPLC Background" class="background">
+    </picture>
     <div class="desc">
-        <div class="desc-content">
-            <h2 class="logic">🧠 Logic Games</h2>
+    <h2 class="logic">🧠 Logic Games</h2>
+    <div class="desc-content">
+        <div class="desc-text">
+            <p> Lomba logic merupakan cabang lomba yang mengandalkan kemampuan logika dari para peserta untuk memecahkan masalah
+            </p>
+        </div>
+        <div class="desc-image">
+            <img src="/pics/MAS09614.JPG" alt="Logic Category Image">
         </div>
     </div>
-    
+    <a href="/" class="back-btn">⬅️ Back to Home</a>
+    </div>
 </body>
 </html>

@@ -14,17 +14,23 @@
     </style>
 </head>
 <body>
-    <div class="background">
-        <img src="../assets/nplc_background.png" alt="NPLC Background" class="bg"> 
-    </div>
-
+    <!-- Background -->
+    <picture>
+        <source 
+        media="(min-width: 768px)" 
+        srcset="/assets/nplc_desktop_background.png">
+        <source 
+        media="(max-width: 767px)" 
+        srcset="/assets/nplc_mobile_background.png">
+        <img src="/assets/nplc_desktop_background.png" alt="NPLC Background" class="background">
+    </picture>
     <!-- Logo -->
     <div class="content">
         <div class="header">
             <img src="../assets/nplc_logo.png" alt="NPLC Logo" class="logo">
             <img src="../assets/nplc_howly.png" alt="Howly" class="howly">
         </div>
-
+        
         <!-- Timer -->
         <div class="countdown">
             <div class="time-segment">
