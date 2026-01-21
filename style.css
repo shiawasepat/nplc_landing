@@ -15,6 +15,7 @@
 
 /* Main Page */
 body {
+    color-scheme: dark;
     overflow:hidden;
     height: 100vh;
     font-family: "Audiowide", sans-serif;
@@ -44,7 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 80vh;
     padding: 20px;
 }
 
@@ -58,12 +59,40 @@ body {
     margin-top: 127px;
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: #d0d0d0;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+
 /* Countdown Timer */
 .countdown {
     display: flex;
     flex-direction: row; 
-    margin-top: 50px;
+    margin-top: 10px;
     gap: 30px;
+}
+
+.countdown-expired {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    pointer-events: none;
 }
 
 .time-segment {
@@ -95,7 +124,7 @@ body {
 }
 
 .links {
-    margin-top: 40px;
+    margin-top: 37px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -116,7 +145,7 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 15px 40px;
+    padding: 10px 30px;
     font-size: 18px;
     text-decoration: none;
     text-transform: uppercase;
@@ -144,32 +173,13 @@ body {
     color: #dedede;
 }
 
-.btn-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.btn-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+.btn-register {
+    padding: 10px 100px;
+    margin: 20px 0 0 0;
+    background-color: #007bf7;
     color: #dedede;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-}
-
-.lock-text {
-    font-size: 18px;
-}
-
-.lock-icon {
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* Portrait */
@@ -242,19 +252,16 @@ body {
             transparent
         );
         box-shadow: rgba(0, 212, 255, 0.5) 0 0 10px;
-        margin: px 0;
+        margin: 0;
     }
 
-    .btn-wrapper, .btn {
+    .btn {
         order: 1;
     }
 
-    .lock-icon {
-        font-size: 20px;
-    }
-
-    .lock-text {
-        font-size: 12px;
+    .btn-register {
+        padding : 10px 50px;
+        order: 0;
     }
 }   
 

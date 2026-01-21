@@ -1,6 +1,6 @@
-const targetDate = new Date('2026-02-18T23:59:59').getTime();
-// const finalDate = new Date(Date.now() + 56 * 24 * 60 * 60 * 1000).getTime();
-// yg diatas klo misalnya hitung tgl final jg cmn nda perlu sih
+// GMT+8
+const targetDate = new Date('2026-02-18T00:00:00+08:00').getTime();
+// const targetDate = new Date(Date.now() + 1 * 1 * 1 * 15 * 1000).getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -16,13 +16,14 @@ function updateCountdown() {
     document.getElementById('minutes').innerText = minutes;
     document.getElementById('seconds').innerText = seconds;
 
-    if (distance < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('countdown').innerText = 'The event has started!';
+    if (distance <= 0) {
+        document.getElementById('days').innerText = 0;
+        document.getElementById('hours').innerText = 0;
+        document.getElementById('minutes').innerText = 0;
+        document.getElementById('seconds').innerText = 0;
     }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    updateCountdown();
     countdownInterval = setInterval(updateCountdown, 1000);
 });
