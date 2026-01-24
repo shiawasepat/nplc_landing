@@ -17,6 +17,7 @@
     padding: 20px;
     background: rgba(70, 164, 193, 0.1);
     border-radius: 10px 10px 0 0;
+
 }
 
 .logic {
@@ -129,5 +130,17 @@
     .dev-overlay {
         font-size: 18px;
         align-items: center;
+    }
+}
+
+/* Portrait Tablet / iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .desc {
+        top: 100px;
+        width: 80%;
+    }
+
+    .desc-content {
+        gap: 20px;
     }
 }
