@@ -134,7 +134,7 @@
 }
 
 /* Portrait Tablet / iPad */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1279px) {
     .desc {
         top: 100px;
         width: 80%;
