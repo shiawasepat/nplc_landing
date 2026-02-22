@@ -168,6 +168,17 @@ body {
   animation: fadeIn 0.3s ease;
 }
 
+.extended-text {
+  pointer-events: none;
+  position: absolute;
+  font-size: 32px;
+  left: 67%;
+  top: 64%;
+  rotate: -10deg;
+  color: #ff4c4c;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 76, 76, 0.7);
+}
 /* Portrait */
 @media (min-width: 344px) and (max-width: 768px) {
   * {

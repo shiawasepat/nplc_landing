@@ -1,5 +1,5 @@
 // GMT+8
-const targetDate = new Date("2026-02-22T00:00:00").getTime();
+const targetDate = new Date("2026-02-25T00:00:00").getTime();
 const openDate = new Date("2026-02-02T00:00:00").getTime();
 
 let hasExpired = false;
@@ -20,6 +20,8 @@ function updateCountdown() {
   document.getElementById("minutes").innerText = minutes;
   document.getElementById("seconds").innerText = seconds;
 
+  extendedPeriod();
+
   if (open >= 0) {
     waitRegisterButton();
   } else {
@@ -39,6 +41,23 @@ function updateCountdown() {
     setTimeout(animateThx);
     clearInterval(countdownInterval);
     disableRegisterButton();
+  }
+}
+
+function extendedPeriod() {
+  const countdown = document.querySelector(".countdown");
+
+  let extendedText = document.querySelector(".extended-text");
+
+  if (!extendedText) {
+    extendedText = document.createElement("div");
+    extendedText.classList.add("extended-text");
+
+    const paragraph = document.createElement("p");
+    paragraph.innerText = "EXTENDED!";
+
+    extendedText.appendChild(paragraph);
+    countdown.appendChild(extendedText);
   }
 }
 
@@ -71,6 +90,13 @@ function animateThx() {
   timeLabels.forEach((label) => (label.style.display = "none"));
   countdown.classList.add("thx-mode");
 
+  const extendedText = document.querySelector(".extended-text");
+  if (extendedText) {
+    extendedText.style.transition = "opacity 0.5s ease";
+    extendedText.style.opacity = "0";
+    setTimeout(() => extendedText.remove(), 500);
+  }
+
   const letters = isMobile ? ["Thank", "You", "🎊", "🎊"] : ["🎊", "Thank", "You", "🎊"];
 
   timeSegments.forEach((segment, index) => {
@@ -90,5 +116,5 @@ function animateThx() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  countdownInterval = setInterval(updateCountdown, 500);
+  countdownInterval = setInterval(updateCountdown, 1000);
 });
