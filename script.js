@@ -49,9 +49,17 @@ function waitRegisterButton() {
 }
 
 function disableRegisterButton() {
+  const isMobile = window.innerWidth <= 768;
   const registerBtn = document.querySelector(".btn-register");
   registerBtn.classList.add("btn-disabled");
+  registerBtn.style.padding = "10px 36px";
   registerBtn.innerText = "Registration is Closed!";
+
+  const mobileBtn = document.querySelector(".btn-register");
+  if (isMobile) {
+    mobileBtn.style.padding = "10px 70px";
+    mobileBtn.innerText = "Closed!";
+  }
 }
 
 function animateThx() {
