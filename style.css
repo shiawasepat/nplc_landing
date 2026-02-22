@@ -152,7 +152,7 @@ body {
 }
 
 .btn-register {
-  padding: 10px 100px;
+  padding: 10px 106px;
   margin: 20px 0 0 0;
   background-color: #007bf7;
   color: #dedede;
@@ -161,7 +161,7 @@ body {
 }
 
 .btn-disabled {
-  padding: 10px auto;
+  padding: 10px;
   background-color: #555555;
   cursor: not-allowed;
   pointer-events: none;
@@ -241,7 +241,7 @@ body {
   }
 
   .btn-register {
-    padding: 10px 50px;
+    padding: 10px 40px;
     order: 0;
   }
 }
