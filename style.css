@@ -255,6 +255,18 @@ body {
     padding: 10px 40px;
     order: 0;
   }
+
+  .extended-text {
+    pointer-events: none;
+    position: absolute;
+    font-size: 20px;
+    left: 33%;
+    top: 43%;
+    rotate: -10deg;
+    color: #ff4c4c;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 76, 76, 0.7);
+  }
 }
 
 /* Portrait Tablet / iPad */
