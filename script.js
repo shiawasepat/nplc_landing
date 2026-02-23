@@ -1,5 +1,5 @@
 // GMT+8
-const targetDate = new Date("2026-02-25T00:00:00").getTime();
+const targetDate = new Date("2026-02-25T23:59:59").getTime();
 const openDate = new Date("2026-02-02T00:00:00").getTime();
 
 let hasExpired = false;
